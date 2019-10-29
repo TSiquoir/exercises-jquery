@@ -1,3 +1,7 @@
 $(function() {
-  // Here your JS code, good luck !
+
+  $("#navbarDropdown").click(function() {
+    $("#dropdown").toggle("display");
+  })
+
 });
