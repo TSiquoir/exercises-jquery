@@ -14,8 +14,11 @@ $(function() {
   $("#changetitle").click(function () {
     var num = Math.floor((Math.random() * 10) + 1);
     $("#title").html("Web Developer" + num)
-  }) 
+  })
 
+  $(".list-group-item").click(function () {
+    $("li").removeClass("active");
+    $(this).addClass("active");
+    })
 
-  
 });
