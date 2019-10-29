@@ -21,4 +21,21 @@ $(function() {
     $(this).addClass("active");
     })
 
+  $("#playVideo").click(function() {
+    var myVideo = $("#video")[0];
+    myVideo.play();
+    setTimeout(function(){ 
+      myVideo.pause();
+    }, 10000);
+  })
+
+  $(".nav-tabs a").click(function() {
+    $(this).tab("show")
+  })
+
+  $("#showModal").click(function(){
+    $("#modal").modal()
+  })
+
+
 });
