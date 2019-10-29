@@ -37,5 +37,41 @@ $(function() {
     $("#modal").modal()
   })
 
+  $(function () {
+    $('[data-toggle="popover"]').popover()
+  })
+
+  $('.popover-dismiss').popover({
+    trigger: 'focus'
+  })
+  
+  var progressBar = $("#progressBar");
+
+  setInterval(function() {
+    var value = progressBar.css("width")
+    var value = progressBar[0].style.width
+
+    value = parseInt(value)
+
+    if (value >= 100) {
+      progressBar.css("width" , "0%")
+     }
+     else {
+      progressBar.css("width" , "100%")
+     }
+  }, 1000)
+
+var isPlayed = true
+
+setInterval(function() {
+  if (isPlayed){
+    $("#spinner").css("animation-play-state", "paused");
+    isPlayed = false;
+    } else {
+      $("#spinner").css("animation-play-state", "running");
+      isPlayed = true;
+    }
+}, 5000);
+
 
 });
